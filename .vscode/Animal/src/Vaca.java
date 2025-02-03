@@ -1,4 +1,4 @@
-package es.cursojava.poo.herencia;
+
 
 public class Vaca extends Animal{
     private int numCuernos;
