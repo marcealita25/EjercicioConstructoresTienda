@@ -1,10 +1,4 @@
 
-
-/*-color
-	-tamanio
-	-forma */
-
-
 public class Boton {
 
     private String color;

@@ -1,15 +1,3 @@
-package
-/*-id
-	-Pantalon
-	-Camisa
-	-Vestido
-	3 Constructores
-		+ vacio
-		+ (Pantalon, Camisa)
-		+ (Vestido)
- */
-
-
 
 
 public class Maniqui {

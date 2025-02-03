@@ -1,7 +1,10 @@
 
+import java.util.Arrays;
+
 import javafx.css.SimpleStyleableObjectProperty;
 
 public class Tienda {
+
      private String nombre;
 
      public Tienda(String nombre) {
@@ -70,6 +73,16 @@ public class Tienda {
 
           }
      }
+
+     @Override
+     public String toString() {
+          return "Tienda [nombre=" + nombre + ", abrirTienda()=" + Arrays.toString(abrirTienda()) + ", getClass()="
+                    + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+
+                    System.out.println("Muestra me los precios");
+     }
+
+     
 
 }
 

@@ -1,69 +1,28 @@
-/*-color
-	-precio
-	-talla
-	-[]Boton */
+import java.util.Arrays;
 
-
-
-public class Camisa {
-
-	private String color;
-	private  double precio;
-	private String talla;
+public class Camisa extends Ropa {
 	private  Boton [] botones;
 
-	
+	public Camisa (String color, String talla, double precio,Boton []botones){
 
-	
-	public Camisa(String color, double precio, String talla, Boton[] boton) {
-		this.color = color;
-		this.precio = precio;
-		this.talla = talla;
+		super(color, precio, talla);
 		this.botones = botones;
 	}
 
-
-
-	public String getColor() {
-	return color;
-}
-
-
-
-public double getPrecio() {
-	return precio;
-}
-
-
-
-public String getTalla() {
-	return talla;
-}
-
-
-
-public Boton[] getBoton() {
-	return botones;
-}
-
-
-
-	public void setColor(String color) {
-		this.color = color;
+	public Boton[] getBotones() {
+		return botones;
 	}
 
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
-
-	public void setTalla(String talla) {
-		this.talla = talla;
-	}
-
-	public void setBoton(Boton[] boton) {
+	public void setBotones(Boton[] botones) {
 		this.botones = botones;
 	}
 
-
-
+	@Override
+	public String toString() {
+		return "Camisa [botones=" + Arrays.toString(botones) + ", getBotones()=" + Arrays.toString(getBotones())
+				+ ", toString()=" + super.toString() + "]";
+	}
+	
+	
 }
+
