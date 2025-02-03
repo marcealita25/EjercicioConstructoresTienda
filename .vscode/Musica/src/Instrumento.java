@@ -10,8 +10,9 @@ public class Instrumento {
     }
 
     public void afinar() {
+    
         if (Math.random() > 0.4) {
-            afinado = true;
+           this.afinado = true;
             System.out.println("Afinando instrumento " + nombre + ", se ha afinado.");
         } else {
             afinado = false;
@@ -30,6 +31,15 @@ public class Instrumento {
     public String getNombre() {
         return nombre;
     }
+
+    @Override
+    public String toString() {
+        return "Instrumento [nombre=" + nombre + ", tipo=" + tipo + ", afinado=" + afinado + "]";
+    }
+
+    
+
+    
 }
 
 
