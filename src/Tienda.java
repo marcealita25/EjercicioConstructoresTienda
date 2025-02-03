@@ -66,7 +66,7 @@ public class Tienda {
           return maniquies;
 
      }
-       private void mostrarEscaparate (Maniqui []manuquies){
+       private void mostrarEscaparate (Maniqui []maniquies){
           for (Maniqui maniqui : maniquies){
                System.out.println("Informacion del maniqui"+maniqui.getId());
                //Datos pantalon
