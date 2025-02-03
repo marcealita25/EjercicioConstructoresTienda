@@ -76,12 +76,10 @@ public class Tienda {
 
      @Override
      public String toString() {
-          return "Tienda [nombre=" + nombre + ", abrirTienda()=" + Arrays.toString(abrirTienda()) + ", getClass()="
-                    + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
-
-                    System.out.println("Muestra me los precios");
+          return "Tienda [nombre=" + nombre + "]";
      }
 
+    
      
 
 }

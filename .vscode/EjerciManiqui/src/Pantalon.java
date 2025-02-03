@@ -15,4 +15,12 @@ public class Pantalon extends Prenda {
     public void setLargo(int largo) {
         this.largo = largo;
     }
+
+    @Override
+    public String toString() {
+        return "Pantalon [largo=" + largo + "]";
+    }
+
+
+    
 }

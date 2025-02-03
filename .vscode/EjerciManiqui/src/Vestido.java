@@ -5,4 +5,11 @@ public class Vestido extends Prenda {
     public Vestido(String color, double precio, String talla) {
         super(color, precio, talla);
     }
+
+    @Override
+    public String toString() {
+        return "Vestido []";
+    }
+
+    
 }

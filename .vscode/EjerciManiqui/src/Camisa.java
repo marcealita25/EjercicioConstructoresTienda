@@ -1,5 +1,7 @@
 package es.cursojava.poo.ejercicios.maniqui;
 
+import java.util.Arrays;
+
 public class Camisa extends Prenda {
     private Boton[] botones;
 
@@ -15,4 +17,12 @@ public class Camisa extends Prenda {
     public void setBotones(Boton[] botones) {
         this.botones = botones;
     }
+
+    @Override
+    public String toString() {
+        return "Camisa [botones=" + Arrays.toString(botones) + ", getBotones()=" + Arrays.toString(getBotones()) + "]";
+    }
+
+
+    
 }
