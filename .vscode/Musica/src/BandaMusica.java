@@ -1,44 +1,60 @@
+import java.util.Arrays;
 import java.util.List;
 
-public class BandaMusica {
+public class BandaMusica{
+   
+    private String nombre;
+
+}
+public BandaMusica(String nombre){
+    this.nombre= nombre;
+}
+
+public static void main(String[] args) {
+    BandaMusica banda = new BandaMusica();
+    banda.empezarConcierto();
+}
+
+ 
     
     public void empezarConcierto() {
         // Crear los instrumentos de la banda
+        Instrumento[] instrumentos = crearInstrumentos();
+
+    private Instrumento[] crearInstrumnetos(){
+
         Instrumento guitarra = new Guitarra("Guitarra Acústica", 6);
         Instrumento guitarraElectrica = new GuitarraElectrica("Guitarra Eléctrica", 6, 100);
         Instrumento piano = new Piano("Piano de Cola", 7, "De Cola");
         Instrumento tambor = new Tambor("Tambor de Batería", "Madera");
 
-        // Crear lista de instrumentos
-        List<Instrumento> instrumentos = List.of(guitarra, guitarraElectrica, piano, tambor);
 
-        // Afinar instrumentos
-        afinarInstrumentos(instrumentos);
-
-        // Tocar instrumentos
-        tocarInstrumentos(instrumentos);
     }
+        
 
-    private void afinarInstrumentos(List<Instrumento> instrumentos) {
+        // Crear lista de instrumentos
+        Instrumento[] instrumentos ={guitarra, guitarraElectrica, piano, tambor}
+
+        return instrumentos;
+
+    
+
+    private void afinarInstrumentos(Instrumento []instrumentos) {
         for (Instrumento instrumento : instrumentos) {
             instrumento.afinar();
         }
     }
 
-    private void tocarInstrumentos(List<Instrumento> instrumentos) {
+    private void tocarInstrumentos(Instrumento []instrumentos) {
         boolean bandaSuenaMal = false;
         
         for (Instrumento instrumento : instrumentos) {
-            if (instrumento instanceof Tambor) {
-                // El tambor se aporrea, no se toca
-                ((Tambor) instrumento).aporrear();
-            } else {
-                // Si algún instrumento no está afinado, la banda suena mal
-                if (!instrumento.isAfinado()) {
-                    bandaSuenaMal = true;
+            if (instrumento .getClass().getName("Tambor")) {
+                Tambor tambor = (Tambor)instrumento;
+                tambor.aporrear();
                 } else {
                     instrumento.tocar();
-                }
+                
             }
         }
 
@@ -49,8 +65,13 @@ public class BandaMusica {
         }
     }
 
-    public static void main(String[] args) {
-        BandaMusica banda = new BandaMusica();
-        banda.empezarConcierto();
+    
+    @Override
+    public String toString() {
+        return "BandaMusica [nombre=" + nombre + ", instrumentos=" + Arrays.toString(instrumentos) + "]";
     }
+
+
+
+    
 }

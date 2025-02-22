@@ -1,54 +1,15 @@
-/*-color
-	-precio
-	-talla
-	-Boton */
+public class Pantalon extends Ropa{
 
 
-
-public class Pantalon {
-
-	private String color;
-	private int precio;
-	private double talla;
 	private Boton boton;
 
 
-	public Pantalon(String color, int precio, double talla, Boton boton) {
-		this.color = color;
-		this.precio = precio;
-		this.talla = talla;
+	public Pantalon(String color, double precio, String talla, Boton boton) {
+		
+		super(color, precio, talla);
 		this.boton = boton;
 	}
-
-
-	public String getColor() {
-		return color;
-	}
-
-
-	public void setColor(String color) {
-		this.color = color;
-	}
-
-
-	public int getPrecio() {
-		return precio;
-	}
-
-
-	public void setPrecio(int precio) {
-		this.precio = precio;
-	}
-
-
-	public double getTalla() {
-		return talla;
-	}
-
-
-	public void setTalla(double talla) {
-		this.talla = talla;
-	}
+	
 
 
 	public Boton getBoton() {
@@ -59,6 +20,25 @@ public class Pantalon {
 	public void setBoton(Boton boton) {
 		this.boton = boton;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Pantalon [boton=" + boton + ", toString()=" + super.toString() + "]";
+	}
+
+
+
+	
+
+
+
+	
+
+
+
+	
 
 	
 

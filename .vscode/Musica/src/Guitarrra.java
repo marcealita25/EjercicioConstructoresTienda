@@ -1,15 +1,46 @@
-public class Guitarra extends Instrumento {
+public class Guitarrra extends Instrumento {
     private int numCuerdas;
 
-    public Guitarra(String nombre, int numCuerdas) {
-        super(nombre, "Guitarra");
+    public Guitarrra(String nombre, int numCuerdas, String tipo) {
+        super(nombre, "Guitarrra");
+
+        this.numCuerdas = numCuerdas;
+    }
+
+      public Guitarrra(String nombre, String tipo, int numCuerdas) {
+        super(nombre, tipo);
+        this.numCuerdas = 6;
+    }
+
+
+    public int getNumCuerdas() {
+        return numCuerdas;
+    }
+
+    public void setNumCuerdas(int numCuerdas) {
         this.numCuerdas = numCuerdas;
     }
 
     @Override
-    public void afinar() {
-        super.afinar();
-        System.out.println("Afinando guitarra " + getNombre() + " con " + numCuerdas + " cuerdas.");
+    public String toString() {
+        return "Guitarrra [numCuerdas=" + numCuerdas + "]";
     }
+    
+    
+    
+    @Override
+    public void Afinar(){
+       super.Afinar();
+      System.out.println("Afinando la guitarra");
+
+    }
+
+
+
 }
+
+
+
+
+
 

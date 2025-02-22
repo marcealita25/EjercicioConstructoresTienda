@@ -1,36 +1,25 @@
-/*main
-	3 Objetos de tipo Maniqui
-     nombre
-     constructor
-     -abrir tienda () --> Donde se vana  generar todos los objetos 
-	3 objetos manique 
-     -mostrar escaparate () Mostara la informacion de cada maniqui 
-     -el precio total de la ropa que llevan y los botones 
-     -cerrar tienda () --> Desvestir a los maniqui 
-     */
+
+import java.util.Arrays;
 
 import javafx.css.SimpleStyleableObjectProperty;
 
 public class Tienda {
-     public Tienda(String nombre){
-          this.nombre = nombre;
-     }
-
-
 
      private String nombre;
 
+     public Tienda(String nombre) {
+          this.nombre = nombre;
+     }
 
-     
-         public static void main( String[] args) {
+     public static void main( String[] args) {
 
           Tienda tienda = new Tienda("Loro piana");
-          Maniqui []maniquies =abrirTienda(){
+          Maniqui []maniquies = tienda.abrirTienda();
 
-          }
+     }
 
 
-          
+     private Maniqui []  abrirTienda (){
           
           Vestido vestido = new Vestido("rojo",45 , "M");
           
@@ -60,74 +49,39 @@ public class Tienda {
 
           System.out.println(b.getColor());
           System.out.println(b.getForma());
-          System.out.println(b.getTamanio())
+          System.out.println(b.getTamanio());
 
-          Maniqui [] = maniquies = {maniqui1, maniqui2, maniqui3};
+          Maniqui [] maniquies = {maniqui1, maniqui2, maniqui3};
           return maniquies;
 
      }
-       private void mostrarEscaparate (Maniqui []manuquies){
-          for (Maniqui maniqui : maniquies){
-               System.out.println("Informacion del maniqui"+maniqui.getId());
-               //Datos pantalon
-               Pantalon pantalon = maniqui.getPantalon();
-              
-               if(pantalon!=null){
 
-                System.out.println("Pantalon");
-               System.out.println("\t color"+ camisa.getColor());
-               System.out.println("\t talla"+ camisa.getPrecio());
-               System.out.println("\t talla"+ camisa.getTalla());
-               
+     private void mostrartiendaEscaparate(Maniqui[] maniquies) {
+          for (Maniqui maniqui : maniquies) {
+               System.out.println("Informacion del maniqui" + maniqui.getId());
+               // Datos pantalon
+               Pantalon pantalon = maniqui.getPantalon();
+
+               if (pantalon != null) {
+
+                    System.out.println("Pantalon");
+                    System.out.println("\t color" + camisa.getColor());
+                    System.out.println("\t talla" + camisa.getPrecio());
+                    System.out.println("\t talla" + camisa.getTalla());
+
                }
 
           }
-       }
-            
-            
-            
-                    
+     }
 
-                    
-                     
-                                 
-                
-                                
-                
-                
-                
-                     
-                     
-                        
-                            
-                
-                
-                
-                     
-                
-                          
-                
-                
-                
-                
-                
-                
-                          
-                     
-                
+     @Override
+     public String toString() {
+          return "Tienda [nombre=" + nombre + "]";
+     }
 
-                     
-          }                              
-                     
-                
-                  
     
      
+
 }
-
-
-     
-
-    
 
 
